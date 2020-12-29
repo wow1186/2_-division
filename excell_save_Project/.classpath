@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/poi-ooxml-schemas-3.15.jar"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/eGovFrameDev-3.7.0-64bit/maven_repository_3_7/commons-io/commons-io/2.4/commons-io-2.4.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.archivename" value="commons-io-2.4.jar"/>
+			<attribute name="javadoc_location" value="jar:file:/D:/eGovFrameDev-3.7.0-64bit/maven_repository_3_7/commons-io/commons-io/2.4/commons-io-2.4-javadoc.jar!/"/>
+			<attribute name="maven.groupId" value="commons-io"/>
+			<attribute name="maven.artifactId" value="commons-io"/>
+			<attribute name="maven.version" value="2.4"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/eGovFrameDev-3.7.0-64bit/maven_repository_3_7/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13.jar" sourcepath="D:/eGovFrameDev-3.7.0-64bit/maven_repository_3_7/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.apache.poi"/>
+			<attribute name="maven.artifactId" value="poi-ooxml"/>
+			<attribute name="maven.version" value="3.13"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/eGovFrameDev-3.7.0-64bit/maven_repository_3_7/org/apache/poi/poi-ooxml/3.15/poi-ooxml-3.15.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.archivename" value="poi-ooxml-3.15.jar"/>
+			<attribute name="maven.groupId" value="org.apache.poi"/>
+			<attribute name="maven.artifactId" value="poi-ooxml"/>
+			<attribute name="maven.version" value="3.15"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/eGovFrameDev-3.7.0-64bit/maven_repository_3_7/org/apache/poi/poi-ooxml/3.9/poi-ooxml-3.9.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.archivename" value="poi-ooxml-3.9.jar"/>
+			<attribute name="maven.groupId" value="org.apache.poi"/>
+			<attribute name="maven.artifactId" value="poi-ooxml"/>
+			<attribute name="maven.version" value="3.9"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

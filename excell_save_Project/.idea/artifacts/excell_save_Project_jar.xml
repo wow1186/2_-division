@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="excell_save_Project:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/excell_save_Project_jar</output-path>
+    <root id="archive" name="excell_save_Project.jar">
+      <element id="module-output" name="excell_save_Project" />
+      <element id="library" level="module" name="commons-io-2.4.jar" module-name="excell_save_Project" />
+      <element id="library" level="module" name="poi-ooxml-3.13.jar" module-name="excell_save_Project" />
+      <element id="library" level="module" name="poi-ooxml-3.15.jar" module-name="excell_save_Project" />
+      <element id="library" level="module" name="poi-ooxml-schemas-3.15.jar" module-name="excell_save_Project" />
+      <element id="library" level="module" name="poi-ooxml-3.9.jar" module-name="excell_save_Project" />
+    </root>
+  </artifact>
+</component>
