@@ -216,17 +216,6 @@ public class Frame extends JFrame {
                 file_count.mkdir();
                 file_count.mkdirs();
 
-
-                /*
-                 * File file_count = new File(targetF.getAbsolutePath()); cut =
-                 * file_count.toString().split("\\\\"); /* cut 0 , 1 은 c: 확장자명 /
-                 * 파일결과물 이름임 builder = new StringBuilder(); /* 확장자명 , 저장할 폴더의
-                 * 위치를 뺀 이름 for (int k = 2; k < cut.length; k++) { builder =
-                 * builder.append(cut[k]); System.out.println("빌더:" + cut[k]);
-                 * FILEPATHNAME = builder.toString(); }
-                 */
-
-
                 System.out.println("확장자명 :" + fileNameSub);
                 System.out.println("파일이 있는 위치" + file);
                 temp = new File(targetF.getAbsolutePath() + File.separator + df.format(count_lastindex).toString() + fileNameSub);
@@ -250,16 +239,7 @@ public class Frame extends JFrame {
                         fos.write(b, 0, cnt);
 
                     }
-				 
-					/*
-					back_i = new FileInputStream(file);
-					back_o = new FileOutputStream(backup);
-					byte[] b2 = new byte[4096];
-					int cnt2 = 0;
-					while ((cnt = back_i.read(b2)) != -1) {
-						back_o.write(b2, 0, cnt2);
-					}
-					*/
+
                     System.out.println("복사완료" + temp);
                 } catch (Exception e) {
                     failed = 1;
@@ -289,7 +269,7 @@ public class Frame extends JFrame {
                             }
                         }
                     } catch (IOException e) {
-                        // TODO Auto-generated catch block
+           
                         e.printStackTrace();
                     }
 
@@ -310,12 +290,11 @@ public class Frame extends JFrame {
 
         File[] target_file = sourceF.listFiles();
 
-        // System.out.println("탬프" + temp);
         for (File file : target_file) {
             File temp = new File(targetF.getAbsolutePath() + File.separator + file.getName());
             System.out.println("빌더" + temp);
 
-            // System.out.println("이전 폴더의 복사할 파일:" + temp +"복사 횟수 :" + i);
+         
 
             FileInputStream fis = null;
             FileOutputStream fos = null;
@@ -380,10 +359,10 @@ public class Frame extends JFrame {
                 //fileNameSub = "." + FilenameUtils.getExtension(file.getName());
 
                 if (fileNameSub.length() >= 4) {
-                    String check0 = file.getName(); // 2개
-                    String check1 = file.getName(); // 3개
-                    String check2 = file.getName(); // 4개
-                    String check3 = file.getName(); // 5개
+                    String check0 = file.getName(); 
+                    String check1 = file.getName();
+                    String check2 = file.getName(); 
+                    String check3 = file.getName(); 
 
                     check0 = fileNameSub.substring(fileNameSub.length() - 3,
                             fileNameSub.length());
@@ -405,19 +384,6 @@ public class Frame extends JFrame {
                     }
 
                 }
-
-                /*
-                 * if(i == 50) { int result =
-                 * JOptionPane.showConfirmDialog(null,failedCheck_list.get(
-                 * failedCheck_list.size() - 1) + File.separator + count_Str
-                 * +"에 오류가 났습니다 \n 오류내용 :" ,"Confirm" ,JOptionPane.YES_NO_OPTION
-                 * ); if(result == JOptionPane.CLOSED_OPTION) {
-                 *
-                 * } else if(result == JOptionPane.YES_OPTION) {
-                 *
-                 *
-                 * } }
-                 */
 
                 if (i % 3000 == 0) {
 
@@ -461,9 +427,6 @@ public class Frame extends JFrame {
                     YEARNAME = cut[cut.length-2];
                     FILEPATHNAME = cut[cut.length-1];
 
-                    // FILEPATHNAME = FILEPATHNAME.substring(2);
-                    // System.out.println(targetF.getAbsolutePath());
-
                     System.out.println(targetF.getAbsolutePath() + File.separator + count_Str);
                     folderpath.add(
                             cut[cut.length - 3] + File.separator + cut[cut.length - 2] + File.separator + df.format(foldercount).toString());
@@ -473,79 +436,10 @@ public class Frame extends JFrame {
 
                 i++;
                 strcount++; // 파일구별하기위해 파일에 번호를 붙임.
-                // System.out.println("i:" + i + "ff.length:"+ ff.length);
-                /*
-                 * if(i == ff.length) { int excelcount = 0; // 엑셀
-                 * System.out.println("엑셀저장중.. 엑셀 저장 갯수: = " +
-                 * folderpath.size()); SXSSFWorkbook workbook = new
-                 * SXSSFWorkbook(); // Excel Workbook 생성 Sheet sheet =
-                 * workbook.createSheet("엑셀쓰기"); // Excel Sheet 생성 for (int
-                 * rownum = 0; rownum < folderpath.size(); rownum++) { Row row =
-                 * sheet.createRow(rownum); // Excel Row 생성 Cell cell =
-                 * row.createCell(0); // cell 생성
-                 * cell.setCellValue(folderpath.get(rownum)); }
-                 *
-                 * excellcount++; FileOutputStream fos2 = null; try {
-                 *
-                 * fos2 = new FileOutputStream(cut[0] + File.separator + cut[1]
-                 * + File.separator +"엑셀업로드.xlsx"); workbook.write(fos2); //
-                 * excel 저장 } catch (FileNotFoundException e) { // TODO
-                 * Auto-generated catch block e.printStackTrace(); } catch
-                 * (IOException e) { // TODO Auto-generated catch block
-                 * e.printStackTrace(); } finally {
-                 *
-                 * try{ if (fos2 != null) { fos2.close(); // file resource 반환 }
-                 * if (workbook != null) { workbook.close(); // excel resource
-                 * 반환 } }catch (IOException e) { // TODO Auto-generated catch
-                 * block e.printStackTrace(); } } }
-                 */
-
-              //  System.out.println("확장자명 :" + fileNameSub);
-               // System.out.println("파일이 있는 위치" + file);
+              
                 temp = new File(targetF.getAbsolutePath() + File.separator + df.format(foldercount) + File.separator + CODENAME +"-"+ YEARNAME+"-" + FILEPATHNAME
                         + "-" + df.format(strcount) + fileNameSub);
-             //   System.out.println("복사될 위치" + temp);
-                // oldList.add(file.toString());
-                // newList.add(temp.toString());
-
-                // System.out.println(ff.length);
-
-                /*
-                 * if(i == ff.length) {
-                 *
-                 *
-                 * SXSSFWorkbook workbook = new SXSSFWorkbook(); // Excel
-                 * Workbook 생성
-                 *
-                 * Sheet sheet = workbook.createSheet("엑셀쓰기"); // Excel Sheet 생성
-                 *
-                 * for (int rownum = 0; rownum < i; rownum++) { // data row 개수
-                 * 만큼 반복해서 처리 Row row = sheet.createRow(rownum); // Excel Row 생성
-                 *
-                 *
-                 * for (int column = 0; column < 2; column++) { // data row의
-                 * column 수만큼 반복해서 처리 Cell cell = row.createCell(column); //
-                 * cell 생성 if(column == 0) {
-                 * cell.setCellValue(oldList.get(rownum)); } else if(column ==
-                 * 1){ cell.setCellValue(newList.get(rownum)); // cell에 값 쓰기 } }
-                 * }
-                 *
-                 * FileOutputStream fos2 = null; try { fos2 = new
-                 * FileOutputStream("c:"+File.separator+File.separator + "2015"
-                 * +File.separator + excelcount + "test.xlsx" );
-                 * workbook.write(fos2); // excel 저장
-                 *
-                 *
-                 * } catch (FileNotFoundException e) { // TODO Auto-generated
-                 * catch block e.printStackTrace(); } catch (IOException e) { //
-                 * TODO Auto-generated catch block e.printStackTrace(); }
-                 * finally {
-                 *
-                 * try{ if (fos2 != null) { fos2.close(); // file resource 반환 }
-                 * if (workbook != null) { workbook.close(); // excel resource
-                 * 반환 } }catch (IOException e) { // TODO Auto-generated catch
-                 * block e.printStackTrace(); } } }
-                 */
+       
 
                 FileInputStream fis = null;
                 FileOutputStream fos = null;
@@ -923,9 +817,6 @@ public class Frame extends JFrame {
         String OLD_PATH = oldPathDirve;
         String NEW_PATH = newPathDrive;
 
-        // System.out.println("올드버전 : "+ OLD_PATH);
-        // System.out.println("새버전 : "+ NEW_PATH);
-
         File oldFilefolder = new File(OLD_PATH);
         File newFilefolder = new File(NEW_PATH);
 
@@ -934,15 +825,7 @@ public class Frame extends JFrame {
 
         Copy_Rename(oldFilefolder, newFilefolder);
 
-        // copy_3(oldFilefolder, newFilefolder, OLD_PATH, NEW_PATH);
-
-        /*
-         * result = JOptionPane.showConfirmDialog(
-         * null,"저장 완료!                                                                                                                                                                    "
-         * + "\n\n\n\n\n\n\n\n\n\n 분류횟수: "+folderpath.size() ,"Confirm"
-         * ,JOptionPane.CLOSED_OPTION );
-         *
-         */
+    
 
         dispose a = new dispose();
 
@@ -1011,13 +894,7 @@ public class Frame extends JFrame {
                 System.out.println("엑셀 저장 완료 ! 총 갯수 : " + folderpath.size());
                 fos2 = new FileOutputStream(NEW_PATH + File.separator + "작업분류.xlsx");
 
-                /*
-                 * result = JOptionPane.showConfirmDialog(
-                 * null,"저장 완료!                                                                                                                                                                    "
-                 * + "\n\n\n\n\n\n\n\n\n\n 분류횟수: "+folderpath.size() ,"Confirm"
-                 * ,JOptionPane.CLOSED_OPTION );
-                 *
-                 */
+       
 
                 dispose a = new dispose();
 
@@ -1087,20 +964,14 @@ public class Frame extends JFrame {
             String OLD_PATH = oldPathDirve + Excell_list.get(i);
             String NEW_PATH = newPathDrive + Excell_list2.get(i);
 
-            // System.out.println("올드버전 : "+ OLD_PATH);
-            // System.out.println("새버전 : "+ NEW_PATH);
+    
 
             File oldFilefolder = new File(OLD_PATH);
             File newFilefolder = new File(NEW_PATH);
 
             old_result = oldFilefolder.mkdir();
             new_result = newFilefolder.mkdir();
-            /*
-             * System.out.println( old_result ? oldFilefolder + "에 폴더를 생성 하였습니다"
-             * : oldFilefolder + "에 경로가 존재 하지않아  상위 디렉토리를 생성 합니다.");
-             * System.out.println( new_result ? newFilefolder + "에 폴더를 생성 하였습니다"
-             * : newFilefolder + "에 경로가 존재 하지않아  상위 디렉토리를 생성 합니다.");
-             */
+       
 
             old_result = oldFilefolder.mkdirs();
             new_result = newFilefolder.mkdirs();
@@ -1169,31 +1040,15 @@ public class Frame extends JFrame {
                     }
 
                     System.out.println(old_String_path.toString());
-                    // File oldFilePath = new File(old_String_path.toString());
-                    // File oldFile = new File(oldPathDirve +
-                    // Excell_list.get(i));
-                    // File newFilePath = new File(move_PATH);
-                    // File newFile = new File(new_PATH_DRIVE + PATH +"\\");
-                    // oldFileFolder.renameTo(new File(PATH_DRIVE + ":\\" +
-                    // PATH));
+                
                     File oldFilePath = new File(old_String_path.toString());
                     // copy_upgrade(oldFile, newFilePath);
                     if (Er == true)
                         break;
-                    // copy(oldFileFolder, newFilefolder ,
-                    // File_namelist.get(i));
-                    // delete(old_String_path.toString());
+              
 
                 }
 
-                /*
-                 * StringBuilder err = new StringBuilder();
-                 *
-                 * for(int i = 0 ; i < Erros_list.size(); i++) {
-                 * err.append(Erros_list.get(i) +"\n"); }
-                 *
-                 * JOptionPane.showMessageDialog(null,err.toString());
-                 */
             }
 
         } else {
